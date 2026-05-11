@@ -78,9 +78,17 @@
     "webpack-hot-middleware": "^2.25.4",
     "webpack-merge": "^4.2.1"
   },
-
-  "ghooks": {
-    "commit-msg": "validate-commit-msg",
-    "pre-commit": "npm run lint"
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "npm run lint"
+    },
+    "validate-commit-msg": {
+      "helpMessage": "\n提交说明第一行请用：type: subject 或 type(scope): subject\n（冒号后必须有一个空格；scope 可选）\n常用 type：feat, fix, docs, style, refactor, test, chore\n",
+      "scope": {
+        "required": false,
+        "validate": false
+      }
+    }
   }
 }

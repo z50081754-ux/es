@@ -11,6 +11,5 @@ try {
 } catch (error) {
   console.error(error);
 }
-const a=1;
-const b=2;
+
 
